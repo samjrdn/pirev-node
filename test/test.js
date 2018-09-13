@@ -16,7 +16,7 @@ describe('getInfo', () => {
     it('should match the given output', (done) => {
       pirev.getInfo(CPUINFO_PI1)
         .then((info) => {
-          expect(info).to.deep.equal({
+          expect(info.rev).to.deep.equal({
             type: 'B',
             memory: '512 MB',
             processor: 'BCM2835',
@@ -32,7 +32,7 @@ describe('getInfo', () => {
     it('should match the given output', (done) => {
       pirev.getInfo(CPUINFO_PI3)
         .then((info) => {
-          expect(info).to.deep.equal({
+          expect(info.rev).to.deep.equal({
             type: '3B',
             memory: '1 GB',
             processor: 'BCM2837',
@@ -70,7 +70,7 @@ describe('getInfoSync', () => {
     it('should match the given output', () => {
       const info = pirev.getInfoSync(CPUINFO_PI1);
 
-      expect(info).to.deep.equal({
+      expect(info.rev).to.deep.equal({
         type: 'B',
         memory: '512 MB',
         processor: 'BCM2835',
@@ -84,7 +84,7 @@ describe('getInfoSync', () => {
     it('should match the given output', () => {
       const info = pirev.getInfoSync(CPUINFO_PI3);
       
-      expect(info).to.deep.equal({
+      expect(info.rev).to.deep.equal({
         type: '3B',
         memory: '1 GB',
         processor: 'BCM2837',
