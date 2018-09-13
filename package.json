@@ -1,0 +1,18 @@
+{
+  "name": "pirev",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "Sam Jordan",
+  "license": "MIT",
+  "repository": "github:samjrdn/pirev-node",
+  "homepage": "https://github.com/samjrdn/pirev-node#readme",
+  "bin": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.5.0",
+    "mocha": "^5.2.0"
+  }
+}
