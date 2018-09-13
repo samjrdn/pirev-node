@@ -1,14 +1,16 @@
 {
   "name": "pirev",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "lib",
   "author": "Sam Jordan",
   "license": "MIT",
   "repository": "github:samjrdn/pirev-node",
   "homepage": "https://github.com/samjrdn/pirev-node#readme",
   "bin": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "node lib",
+    "test": "mocha",
+    "lint": "eslint lib"
   },
   "devDependencies": {
     "chai": "^4.1.2",
