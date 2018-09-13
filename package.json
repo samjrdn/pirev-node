@@ -7,6 +7,17 @@
   "repository": "github:samjrdn/pirev-node",
   "homepage": "https://github.com/samjrdn/pirev-node#readme",
   "bin": "lib/index.js",
+  "files": [
+    "/lib/*"
+  ],
+  "keywords": [
+    "raspberry",
+    "pi",
+    "rpi",
+    "revision",
+    "version",
+    "detect"
+  ],
   "scripts": {
     "start": "node lib",
     "test": "mocha",
