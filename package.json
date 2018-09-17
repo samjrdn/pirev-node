@@ -1,6 +1,7 @@
 {
   "name": "pirev",
   "version": "1.0.0",
+  "description": "Raspberry Pi revision utility",
   "main": "lib",
   "author": "Sam Jordan",
   "license": "MIT",
