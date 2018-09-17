@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 if (require.main === module) {
-  const { getInfoSync } = require('./pirev');
+  const { getInfoSync } = require('./lib/pirev');
 
   try {
     console.log(getInfoSync(process.argv[2]));
@@ -9,5 +9,5 @@ if (require.main === module) {
     console.error(error);
   }
 } else {
-  module.exports = require('./pirev');
+  module.exports = require('./lib/pirev');
 }

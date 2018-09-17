@@ -1,6 +1,6 @@
 const path = require('path');
 const { expect } = require('chai');
-const pirev = require('../lib');
+const pirev = require('..');
 
 function testDataPath(filename) {
   return path.join(__dirname, 'data', filename);

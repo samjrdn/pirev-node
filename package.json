@@ -2,13 +2,14 @@
   "name": "pirev",
   "version": "1.0.0",
   "description": "Raspberry Pi revision utility",
-  "main": "lib",
+  "main": "index.js",
   "author": "Sam Jordan",
   "license": "MIT",
   "repository": "github:samjrdn/pirev-node",
   "homepage": "https://github.com/samjrdn/pirev-node#readme",
-  "bin": "lib/index.js",
+  "bin": "index.js",
   "files": [
+    "/index.js",
     "/lib/*"
   ],
   "keywords": [
@@ -20,7 +21,7 @@
     "detect"
   ],
   "scripts": {
-    "start": "node lib",
+    "start": "node index.js",
     "test": "mocha",
     "lint": "eslint lib"
   },
