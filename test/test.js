@@ -16,12 +16,13 @@ describe('getInfo', () => {
     it('should match the given output', (done) => {
       pirev.getInfo(CPUINFO_PI1)
         .then((info) => {
-          expect(info.rev).to.deep.equal({
+          expect(info.revision).to.deep.equal({
             type: 'B',
             memory: '512 MB',
             processor: 'BCM2835',
             revision: 2,
             manufacturer: 'Sony UK',
+            code: '000e',
           });
         })
         .then(done);
@@ -32,12 +33,13 @@ describe('getInfo', () => {
     it('should match the given output', (done) => {
       pirev.getInfo(CPUINFO_PI3)
         .then((info) => {
-          expect(info.rev).to.deep.equal({
+          expect(info.revision).to.deep.equal({
             type: '3B',
             memory: '1 GB',
             processor: 'BCM2837',
             revision: 2,
             manufacturer: 'Embest',
+            code: 'a22082',
           });
         })
         .then(done);
@@ -70,12 +72,13 @@ describe('getInfoSync', () => {
     it('should match the given output', () => {
       const info = pirev.getInfoSync(CPUINFO_PI1);
 
-      expect(info.rev).to.deep.equal({
+      expect(info.revision).to.deep.equal({
         type: 'B',
         memory: '512 MB',
         processor: 'BCM2835',
         revision: 2,
         manufacturer: 'Sony UK',
+        code: '000e',
       });
     });
   });
@@ -84,12 +87,13 @@ describe('getInfoSync', () => {
     it('should match the given output', () => {
       const info = pirev.getInfoSync(CPUINFO_PI3);
       
-      expect(info.rev).to.deep.equal({
+      expect(info.revision).to.deep.equal({
         type: '3B',
         memory: '1 GB',
         processor: 'BCM2837',
         revision: 2,
         manufacturer: 'Embest',
+        code: 'a22082',
       });
     });
   });
