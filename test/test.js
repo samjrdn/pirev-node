@@ -20,7 +20,7 @@ describe('getInfo', () => {
             type: 'B',
             memory: '512 MB',
             processor: 'BCM2835',
-            revision: 2,
+            revision: 2.0,
             manufacturer: 'Sony UK',
             code: '000e',
           });
@@ -37,7 +37,7 @@ describe('getInfo', () => {
             type: '3B',
             memory: '1 GB',
             processor: 'BCM2837',
-            revision: 2,
+            revision: 1.2,
             manufacturer: 'Embest',
             code: 'a22082',
           });
@@ -76,7 +76,7 @@ describe('getInfoSync', () => {
         type: 'B',
         memory: '512 MB',
         processor: 'BCM2835',
-        revision: 2,
+        revision: 2.0,
         manufacturer: 'Sony UK',
         code: '000e',
       });
@@ -91,7 +91,7 @@ describe('getInfoSync', () => {
         type: '3B',
         memory: '1 GB',
         processor: 'BCM2837',
-        revision: 2,
+        revision: 1.2,
         manufacturer: 'Embest',
         code: 'a22082',
       });
