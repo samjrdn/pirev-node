@@ -1,15 +1,18 @@
 # pirev
 
-A small utility to provide hardware revision information for Raspberry Pi devices. All information is parsed from the device's [revision code](https://www.raspberrypi.org/documentation/hardware/raspberrypi/revision-codes/README.md) located in `/proc/cpuinfo`.
+[![npm version](https://img.shields.io/npm/v/pirev.svg?style=flat)](https://yarnpkg.com/en/package/pirev)
+[![license](https://img.shields.io/npm/l/pirev.svg?style=flat)](https://opensource.org/licenses/MIT)
+
+A tiny, zero-dependency utility providing hardware revision information for Raspberry Pi devices. All information is parsed from the device's [revision code](https://www.raspberrypi.org/documentation/hardware/raspberrypi/revision-codes/README.md) located in `/proc/cpuinfo`.
 
 ## Installation
 
 ```
-npm install pirev
+yarn add pirev
 ```
 or
 ```
-yarn add pirev
+npm install pirev
 ```
 
 ## Usage
