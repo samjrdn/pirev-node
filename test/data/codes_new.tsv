@@ -1,4 +1,4 @@
-code	model	revision	ram	manufacturer
+Code	Model	Revision	RAM	Manufacturer
 900021	A+	1.1	512 MB	Sony UK
 900032	B+	1.2	512 MB	Sony UK
 900092	Zero	1.2	512 MB	Sony UK
@@ -18,3 +18,4 @@ a22082	3B	1.2	1 GB	Embest
 a220a0	CM3	1.0	1 GB	Embest
 a32082	3B	1.2	1 GB	Sony Japan
 a52082	3B	1.2	1 GB	Stadium
+a02100	CM3+	1.0	1 GB	Sony UK
