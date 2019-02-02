@@ -9,7 +9,10 @@ function testDataPath(filename) {
 }
 
 function readTsvData(filename) {
-  return csv(fs.createReadStream(filename), { separator: '\t' });
+  return csv(fs.createReadStream(filename), {
+    mapHeaders: ({ header }) => header.toLowerCase(),
+    separator: '\t',
+  });
 }
 
 const MISSING_FILE = testDataPath('missing');
