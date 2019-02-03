@@ -22,8 +22,8 @@ npm install pirev
 ```
 const pirev = require('pirev');
 
-pirev.getInfo().then(({ type }) => {
-  console.log(`Raspberry Pi ${type}`);
+pirev.getInfo().then(({ revision }) => {
+  console.log(`Raspberry Pi ${revision.type}`);
 });
 ```
 
@@ -32,9 +32,9 @@ pirev.getInfo().then(({ type }) => {
 ```
 const pirev = require('pirev');
 
-const { type } = pirev.getInfoSync();
+const { revision } = pirev.getInfoSync();
 
-console.log(`Raspberry Pi ${type}`);
+console.log(`Raspberry Pi ${revision.type}`);
 ```
 
 ## Error handling
@@ -43,14 +43,14 @@ Running the utility on a device which is **not** a Raspberry Pi will result in a
 
 ```
 pirev.getInfo()
-  .then(({ type }) => console.log(`Raspberry Pi ${type}`))
+  .then(({ revision }) => console.log(`Raspberry Pi ${revision.type}`))
   .catch(() => console.warn('Not a Raspberry Pi device!'));
 ```
 or
 ```
 try {
-  const { type } = pirev.getInfoSync();
-  console.log(`Raspberry Pi ${type}`);
+  const { revision } = pirev.getInfoSync();
+  console.log(`Raspberry Pi ${revision.type}`);
 } catch {
   console.warn('Not a Raspberry Pi device!');
 }
