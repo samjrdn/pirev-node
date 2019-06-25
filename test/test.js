@@ -39,7 +39,7 @@ describe('getInfo', () => {
         .then((info) => {
           expect(info.revision).to.deep.equal({
             type: 'B',
-            memory: '512 MB',
+            memory: '512MB',
             processor: 'BCM2835',
             revision: 2.0,
             manufacturer: 'Sony UK',
@@ -56,7 +56,7 @@ describe('getInfo', () => {
         .then((info) => {
           expect(info.revision).to.deep.equal({
             type: '3B',
-            memory: '1 GB',
+            memory: '1GB',
             processor: 'BCM2837',
             revision: 1.2,
             manufacturer: 'Embest',
@@ -93,7 +93,7 @@ describe('getInfoSync', () => {
 
       expect(info.revision).to.deep.equal({
         type: 'B',
-        memory: '512 MB',
+        memory: '512MB',
         processor: 'BCM2835',
         revision: 2.0,
         manufacturer: 'Sony UK',
@@ -108,7 +108,7 @@ describe('getInfoSync', () => {
 
       expect(info.revision).to.deep.equal({
         type: '3B',
-        memory: '1 GB',
+        memory: '1GB',
         processor: 'BCM2837',
         revision: 1.2,
         manufacturer: 'Embest',
