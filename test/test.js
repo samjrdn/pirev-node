@@ -60,6 +60,12 @@ describe('getInfo', () => {
             processor: 'BCM2837',
             revision: 1.2,
             manufacturer: 'Embest',
+            overvoltage: true,
+            otp: {
+              program: true,
+              read: true,
+            },
+            warranty: true,
             code: 'a22082',
           });
         })
@@ -112,6 +118,12 @@ describe('getInfoSync', () => {
         processor: 'BCM2837',
         revision: 1.2,
         manufacturer: 'Embest',
+        overvoltage: true,
+        otp: {
+          program: true,
+          read: true,
+        },
+        warranty: true,
         code: 'a22082',
       });
     });
@@ -150,6 +162,38 @@ describe('revinfo', () => {
       expect(info).to.have.property('memory', ram);
       expect(info).to.have.property('revision', parseFloat(revision));
       expect(info).to.have.property('manufacturer', manufacturer);
+      expect(info).to.have.property('overvoltage', true);
+      expect(info.otp).to.have.property('program', true);
+      expect(info.otp).to.have.property('read', true);
+      expect(info).to.have.property('warranty', true);
     });
+  });
+
+  it('correctly parses overvoltage bit', () => {
+    const code = 0x80800000;
+    const {overvoltage} = pirev.getRevInfo(code);
+
+    expect(overvoltage).to.be.false;
+  });
+
+  it('correctly parses OTP program bit', () => {
+    const code = 0x40800000;
+    const {otp} = pirev.getRevInfo(code);
+
+    expect(otp.program).to.be.false;
+  });
+
+  it('correctly parses OTP read bit', () => {
+    const code = 0x20800000;
+    const {otp} = pirev.getRevInfo(code);
+
+    expect(otp.read).to.be.false;
+  });
+
+  it('correctly parses warranty bit', () => {
+    const code = 0x2800000;
+    const {warranty} = pirev.getRevInfo(code);
+
+    expect(warranty).to.be.false;
   });
 });
