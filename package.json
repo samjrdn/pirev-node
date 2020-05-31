@@ -1,6 +1,6 @@
 {
   "name": "pirev",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Raspberry Pi revision utility",
   "main": "index.js",
   "author": "Sam Jordan",
